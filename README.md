@@ -1,23 +1,6 @@
 # Guns
 
 This application scrapes a website for recent gun crime in America. It'll then post it to the provided twitter account. Please put an end to guns and an end to the violence.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'guns'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install guns
-
 ## Usage
 
 Option flags:
@@ -38,7 +21,6 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/BlueHatbRit/guns.
-
 
 ## License
 

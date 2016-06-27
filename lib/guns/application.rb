@@ -7,8 +7,8 @@ module Guns
       super
       @name = 'twitter-guns'
       opts = parse_options
-      incident_store = IncidentStore.new
       reporter = TwitterReporter.new(opts[:key], opts[:secret], opts[:token], opts[:token_secret])
+      incident_store = IncidentStore.new
       @scheduler = Rufus::Scheduler.new
       @scraper = Scraper.new(reporter, incident_store)
     end

@@ -20,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-Running the application will use the defaults, later on we'll have some fancy flags.
+Option flags:
+
+* `-k` || `--key` - Twitter key
+* `-s` || `--secret` - Twitter secret
+* `-t` || `--token` - Twitter token
+* `-q` || `--token_secret` - Twitter token secret
+
+Example:
+
+`ruby -Ilib exe/guns -k KEY -s SECRET -t TOKEN -q TOKEN_SECRET`
 
 ## Development
 

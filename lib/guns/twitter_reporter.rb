@@ -14,6 +14,7 @@ module Guns
     def report_incident(incident)
       tweet = "#{incident.city}, #{incident.state} - Killed: #{incident.num_killed}, Injured: #{incident.num_injured}"
       @client.update(tweet)
+      puts "Posting: #{tweet}"
     end
   end
 end

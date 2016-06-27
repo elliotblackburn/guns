@@ -4,7 +4,7 @@ require 'yaml'
 
 module Guns
   class Scraper
-    URL = http://www.gunviolencearchive.org/last-72-hours
+    URL = "http://www.gunviolencearchive.org/last-72-hours"
 
     def initialize(reporter, incident_store)
       @reporter = reporter

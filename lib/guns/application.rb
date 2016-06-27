@@ -1,4 +1,5 @@
 require 'optparse'
+require 'rufus-scheduler'
 
 module Guns
   class Application
@@ -8,6 +9,7 @@ module Guns
       opts = parse_options
       incident_store = IncidentStore.new
       reporter = TwitterReporter.new(opts[:key], opts[:secret], opts[:token], opts[:token_secret])
+      @scheduler = Rufus::Scheduler.new
       @scraper = Scraper.new(reporter, incident_store)
     end
 
@@ -25,7 +27,15 @@ module Guns
 
     def run(app_name='twitter-guns')
       @name = app_name
-      @scraper.run
+
+      interval = "1m"
+      puts "Running every #{interval}!"
+      @scheduler.in interval do
+        puts "scraping"
+        @scraper.run
+      end
+
+      @scheduler.join
     end
   end
 end

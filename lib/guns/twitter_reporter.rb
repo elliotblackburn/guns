@@ -2,13 +2,18 @@ require 'twitter'
 
 module Guns
   class TwitterReporter
-    def initialize
-      client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "YOUR_CONSUMER_KEY"
-        config.consumer_secret     = "YOUR_CONSUMER_SECRET"
-        config.access_token        = "YOUR_ACCESS_TOKEN"
-        config.access_token_secret = "YOUR_ACCESS_SECRET"
+    def initialize(key, secret, token, token_secret)
+      @client = Twitter::REST::Client.new do |config|
+        config.consumer_key = key
+        config.consumer_secret = secret
+        config.access_token = token
+        config.access_token_secret = token_secret
       end
+    end
+
+    def report_incident(incident)
+      tweet = "#{incident.city}, #{incident.state} - Killed: #{incident.num_killed}, Injured: #{incident.num_injured}"
+      @client.update(tweet)
     end
   end
 end

@@ -23,7 +23,7 @@ module Guns
 
     def incidents_are_equal?(incident_one, incident_two)
       # ugly ugly ugly
-      if incident_one.date == incident_two.date && incident_one.state == incident_two.state && incident_one.city == incident_two.city && incident_one.address == incident_two.address && incident_one.num_killed == incident_two.num_killed && incident_one.num_injured == incident_two.num_injured
+      if incident_one.date == incident_two.date && incident_one.state == incident_two.state && incident_one.city == incident_two.city && incident_one.address == incident_two.address && incident_one.num_killed == incident_two.num_killed && incident_one.num_injured == incident_two.num_injured && incident_one.source == incident_two.source
         return true
       end
       return false

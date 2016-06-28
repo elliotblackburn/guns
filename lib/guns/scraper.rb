@@ -40,8 +40,9 @@ module Guns
       address = table_entry.children[3].children.text
       num_killed = table_entry.children[4].children.text
       num_injured = table_entry.children[5].children.text
+      source = table_entry.children[6].children[0].children[2].children[0].attributes["href"].value
 
-      return Incident.new(date, state, city, address, num_killed, num_injured)
+      return Incident.new(date, state, city, address, num_killed, num_injured, source)
     end
   end
 end

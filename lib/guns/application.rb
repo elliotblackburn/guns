@@ -30,7 +30,7 @@ module Guns
 
       interval = "1m"
       puts "Running every #{interval}!"
-      @scheduler.in interval do
+      @scheduler.every interval do
         puts "scraping"
         @scraper.run
       end

@@ -1,6 +1,9 @@
 # Guns
 
 This application scrapes a website for recent gun crime in America. It'll then post it to the provided twitter account. Please put an end to guns and an end to the violence.
+
+This is the code behind [@USGunIncidents](https://twitter.com/USGunIncidents)! If you want to help make it more efficient or robust then checkout the contributing guide.
+
 ## Usage
 
 Option flags:

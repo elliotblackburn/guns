@@ -1,6 +1,7 @@
 require 'httparty'
 require 'nokogiri'
 require 'yaml'
+require 'pry'
 
 module Guns
   class Scraper
@@ -40,7 +41,12 @@ module Guns
       address = table_entry.children[3].children.text
       num_killed = table_entry.children[4].children.text
       num_injured = table_entry.children[5].children.text
-      source = table_entry.children[6].children[0].children[2].children[0].attributes["href"].value
+
+      if table_entry.children[6].children[0].children[2] != nil
+        source = table_entry.children[6].children[0].children[2].children[0].attributes["href"].value
+      else # No source :(
+        source = ""
+      end
 
       return Incident.new(date, state, city, address, num_killed, num_injured, source)
     end

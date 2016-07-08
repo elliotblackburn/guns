@@ -15,7 +15,8 @@ Option flags:
 
 Example:
 
-`ruby -Ilib exe/guns -k KEY -s SECRET -t TOKEN -q TOKEN_SECRET`
+`rake install`
+`guns -k KEY -s SECRET -t TOKEN -q TOKEN_SECRET`
 
 ## Development
 

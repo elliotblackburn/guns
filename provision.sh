@@ -3,6 +3,7 @@
 RUBY_VERSION="2.3.1"
 
 sudo apt-get -y update
+sudo apt-get -y purge ruby # Remove the system ruby, it interfears with outs
 
 # Get ruby-build
 cd ~/

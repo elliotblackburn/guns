@@ -12,6 +12,7 @@ Option flags:
 * `-s` || `--secret` - Twitter secret
 * `-t` || `--token` - Twitter token
 * `-q` || `--token_secret` - Twitter token secret
+* `-r` || `--raygun` - Raygun API key
 
 Example:
 

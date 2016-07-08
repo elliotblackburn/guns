@@ -30,3 +30,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/BlueHa
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## Sponsors
+
+<img src="https://bluehatbrit.github.io/guns/raygun-logo.png" width="200">
+
+[Error and Crash Reporting](https://raygun.com/products/crash-reporting) for this project is provided by Raygun!

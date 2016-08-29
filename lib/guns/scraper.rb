@@ -35,15 +35,15 @@ module Guns
 
   private
     def parse_incident(table_entry)
-      date = table_entry.children[0].children.text
-      state = table_entry.children[1].children.text
-      city = table_entry.children[2].children.text
-      address = table_entry.children[3].children.text
-      num_killed = table_entry.children[4].children.text
-      num_injured = table_entry.children[5].children.text
+      date = table_entry.children[1].children.text
+      state = table_entry.children[2].children.text
+      city = table_entry.children[3].children.text
+      address = table_entry.children[4].children.text
+      num_killed = table_entry.children[5].children.text
+      num_injured = table_entry.children[6].children.text
 
-      if table_entry.children[6].children[0].children[2] != nil
-        source = table_entry.children[6].children[0].children[2].children[0].attributes["href"].value
+      if table_entry.children[7].children[0].children[2] != nil
+        source = table_entry.children[7].children[0].children[2].children[0].attributes["href"].value
       else # No source :(
         source = ""
       end
